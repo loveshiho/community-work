@@ -38,3 +38,12 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.springframework.asm.ClassReader.<init>(ClassReader.java:287)
 	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:57)
 	... 27 common frames omitted
+18:33:31.920 [http-nio-8080-Acceptor] ERROR o.a.t.u.net.Acceptor - [log,175] - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:203)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:383)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:407)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:547)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

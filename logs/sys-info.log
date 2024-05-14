@@ -10,3 +10,9 @@
 18:04:46.439 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
 18:04:46.636 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
 18:04:46.650 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 1.53 seconds (JVM running for 1.961)
+18:33:31.908 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+18:33:31.915 [Thread-5] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+18:33:31.964 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+18:33:31.968 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+18:33:31.973 [Thread-5] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+18:33:31.974 [Thread-5] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
