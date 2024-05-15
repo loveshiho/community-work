@@ -1,4 +1,4 @@
-package com.akai.web.controller;
+package com.akai.web.controller.community;
 
 import com.akai.common.core.controller.BaseController;
 import com.akai.common.core.page.PageResult;
