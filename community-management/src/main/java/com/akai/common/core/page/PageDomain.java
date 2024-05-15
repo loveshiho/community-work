@@ -6,6 +6,11 @@ public class PageDomain {
     /* 每页显示记录数 */
     private Integer pageSize;
 
+    public PageDomain(Integer pageNum, Integer pageSize) {
+        this.pageNum = pageNum;
+        this.pageSize = pageSize;
+    }
+
     public Integer getPageSize() {
         return pageSize;
     }
