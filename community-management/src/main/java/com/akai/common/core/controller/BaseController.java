@@ -1,6 +1,7 @@
 package com.akai.common.core.controller;
 
 import com.akai.common.constant.HttpStatus;
+import com.akai.common.core.domain.BaseResponse;
 import com.akai.common.core.page.PageDomain;
 import com.akai.common.core.page.PageResult;
 import com.akai.common.utils.ServletUtils;
@@ -36,5 +37,9 @@ public class BaseController {
         pageResult.setRows(list);
         pageResult.setTotal(new PageInfo<>(list).getTotal());
         return pageResult;
+    }
+    /*响应返回结果*/
+    protected BaseResponse toAjax(int rows) {
+        return rows > 0 ? BaseResponse.success(rows) : BaseResponse.fail("操作失败");
     }
 }

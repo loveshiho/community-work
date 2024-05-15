@@ -13,9 +13,17 @@ import java.util.List;
 public class HjyCommunityServiceImpl implements HjyCommunityService {
     @Autowired
     private HjyCommunityMapper hjyCommunityMapper;
+    private static final String CODE_PREFIX = "COMMUNITY_";
 
     @Override
     public List<HjyCommunityDto> selectHjyCommunityList(HjyCommunity hjyCommunity) {
         return hjyCommunityMapper.queryList(hjyCommunity);
+    }
+
+    @Override
+    public int insertHjyCommunity(HjyCommunity hjyCommunity) {
+        // 设置小区编码
+        hjyCommunity.setCommunityCode(CODE_PREFIX + System.currentTimeMillis());
+        return hjyCommunityMapper.insert(hjyCommunity);
     }
 }
