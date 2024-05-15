@@ -8,16 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping({"/system/area"})
+@RequestMapping("/system/area")
 public class SysAreaController extends BaseController {
     @Autowired
     private SysAreaService sysAreaService;
 
-    public SysAreaController() {
+    @RequestMapping("/tree")
+    public BaseResponse getAreaTree() {
+        return BaseResponse.success(sysAreaService.findAreaAsTree());
     }
 
-    @RequestMapping({"/tree"})
-    public BaseResponse getAreaTree() {
-        return BaseResponse.success(this.sysAreaService.findAreaAsTree());
-    }
 }

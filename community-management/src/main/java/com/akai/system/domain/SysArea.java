@@ -4,15 +4,21 @@ import java.io.Serializable;
 
 public class SysArea implements Serializable {
     private static final long serialVersionUID = 924866255834312759L;
+    /**
+     * 城市编码
+     */
     private Integer code;
+    /**
+     * 城市名称
+     */
     private String name;
+    /**
+     * 城市父ID
+     */
     private Integer parentId;
 
-    public SysArea() {
-    }
-
     public Integer getCode() {
-        return this.code;
+        return code;
     }
 
     public void setCode(Integer code) {
@@ -20,7 +26,7 @@ public class SysArea implements Serializable {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -28,7 +34,7 @@ public class SysArea implements Serializable {
     }
 
     public Integer getParentId() {
-        return this.parentId;
+        return parentId;
     }
 
     public void setParentId(Integer parentId) {

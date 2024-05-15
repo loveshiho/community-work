@@ -7,63 +7,57 @@ import com.akai.system.service.SysAreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class SysAreaServiceImpl implements SysAreaService {
     @Autowired
     private SysAreaMapper sysAreaMapper;
 
-    public SysAreaServiceImpl() {
-    }
-
+    @Override
     public List<SysAreaDto> findAreaAsTree() {
-        List<SysArea> sysAreas = this.sysAreaMapper.findAll();
-        List<SysAreaDto> sysAreaDtos = new ArrayList();
+        // 获取区域表数据
+        List<SysArea> sysAreas = sysAreaMapper.findAll();
+        List<SysAreaDto> sysAreaDtos = new ArrayList<>();
         Collections.sort(sysAreas, new Comparator<SysArea>() {
+            @Override
             public int compare(SysArea o1, SysArea o2) {
                 return o1.getParentId() - o2.getParentId();
             }
         });
-
-        for (int i = 0; i < sysAreas.size(); ++i) {
-            SysArea sysArea = (SysArea) sysAreas.get(i);
-            if (sysArea.getParentId() != -1) {
-                if (sysArea.getParentId() > 0) {
-                    break;
-                }
-
-                SysAreaDto sysAreaDto = new SysAreaDto();
-                sysAreaDto.setCode(sysArea.getCode());
-                sysAreaDto.setName(sysArea.getName());
-                sysAreaDto.setChildren(this.getChildrenAsTree(sysArea.getCode(), i, sysAreas));
-                sysAreaDtos.add(sysAreaDto);
+        // 转换为完整树
+        for (int i = 0; i < sysAreas.size(); i++) {
+            SysArea sysArea = sysAreas.get(i);
+            if (sysArea.getParentId() == -1) {
+                continue;
             }
+            if (sysArea.getParentId() > 0) {
+                break;
+            }
+            SysAreaDto sysAreaDto = new SysAreaDto();
+            sysAreaDto.setCode(sysArea.getCode());
+            sysAreaDto.setName(sysArea.getName());
+            sysAreaDto.setChildren(getChildrenAsTree(sysArea.getCode(), i, sysAreas));
+            sysAreaDtos.add(sysAreaDto);
         }
-
         return sysAreaDtos;
     }
 
+    // 递归含义：给你 code、arr、当前所在 index，给我返回整颗树
+    /*牛逼，递归完全正确*/
     public List<SysAreaDto> getChildrenAsTree(int code, int index, List<SysArea> sysAreas) {
-        List<SysAreaDto> sysAreaDtos = new ArrayList();
-        if (index == sysAreas.size()) {
-            return null;
-        } else {
-            for (int i = index + 1; i < sysAreas.size(); ++i) {
-                SysArea sysArea = (SysArea) sysAreas.get(i);
-                if (sysArea.getParentId() == code) {
-                    SysAreaDto sysAreaDto = new SysAreaDto();
-                    sysAreaDto.setCode(sysArea.getCode());
-                    sysAreaDto.setName(sysArea.getName());
-                    sysAreaDto.setChildren(this.getChildrenAsTree(sysArea.getCode(), i, sysAreas));
-                    sysAreaDtos.add(sysAreaDto);
-                }
-            }
+        List<SysAreaDto> sysAreaDtos = new ArrayList<>();
 
-            return sysAreaDtos;
+        for (int i = index + 1; i < sysAreas.size(); i++) {
+            SysArea sysArea = sysAreas.get(i);
+            if (sysArea.getParentId() == code) {
+                SysAreaDto sysAreaDto = new SysAreaDto();
+                sysAreaDto.setCode(sysArea.getCode());
+                sysAreaDto.setName(sysArea.getName());
+                sysAreaDto.setChildren(getChildrenAsTree(sysArea.getCode(), i, sysAreas));
+                sysAreaDtos.add(sysAreaDto);
+            }
         }
+        return sysAreaDtos;
     }
 }
