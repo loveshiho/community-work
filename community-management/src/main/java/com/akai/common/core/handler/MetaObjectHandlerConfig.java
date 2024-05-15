@@ -2,9 +2,10 @@ package com.akai.common.core.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
-
+@Component
 public class MetaObjectHandlerConfig implements MetaObjectHandler {
     // insert时要填充的字段
     @Override

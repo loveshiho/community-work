@@ -34,4 +34,14 @@ public class HjyCommunityController extends BaseController {
     public BaseResponse add(@RequestBody HjyCommunity hjyCommunity) {
         return toAjax(hjyCommunityService.insertHjyCommunity(hjyCommunity));
     }
+
+    @GetMapping("/{communityId}")
+    public BaseResponse getInfo(@PathVariable("communityId") Long communityId) {
+        return BaseResponse.success(hjyCommunityService.selectHjyCommunityById(communityId));
+    }
+
+    @PutMapping
+    public BaseResponse edit(@RequestBody HjyCommunity hjyCommunity) {
+        return toAjax(hjyCommunityService.updateHjyCommunity(hjyCommunity));
+    }
 }
