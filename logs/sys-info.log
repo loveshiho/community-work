@@ -226,3 +226,65 @@
 14:56:25.427 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
 14:56:25.448 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 2.26 seconds (JVM running for 2.921)
 14:57:46.398 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:53:34.877 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+15:53:34.881 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 20858 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+15:53:34.882 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 1 profile is active: "druid"
+15:53:35.811 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+15:53:35.811 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:53:35.811 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+15:53:35.855 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:53:35.927 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+15:53:36.391 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+15:53:36.979 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+15:53:37.006 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 2.458 seconds (JVM running for 3.662)
+15:53:57.217 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:54:15.828 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+15:54:15.833 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 20895 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+15:54:15.833 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 1 profile is active: "druid"
+15:54:16.677 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+15:54:16.677 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:54:16.677 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+15:54:16.720 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:54:16.792 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+15:54:17.226 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+15:54:17.784 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+15:54:17.806 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 2.281 seconds (JVM running for 2.9)
+15:57:15.754 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:57:53.412 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+15:57:53.419 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 20919 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+15:57:53.420 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 1 profile is active: "druid"
+15:57:54.332 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+15:57:54.333 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:57:54.333 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+15:57:54.377 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:57:54.447 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+15:57:54.861 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+15:57:55.422 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+15:57:55.443 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 2.326 seconds (JVM running for 3.138)
+15:57:58.216 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:59:50.493 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+15:59:50.500 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+15:59:53.265 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+15:59:53.268 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 20936 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+15:59:53.268 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 1 profile is active: "druid"
+15:59:54.094 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+15:59:54.094 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:59:54.094 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+15:59:54.136 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:59:54.205 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+15:59:54.597 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+15:59:55.138 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+15:59:55.159 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 2.141 seconds (JVM running for 2.879)
+15:59:56.822 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:01:15.172 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+16:01:15.177 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 20950 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+16:01:15.178 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 1 profile is active: "druid"
+16:01:16.034 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:01:16.034 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:01:16.034 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+16:01:16.083 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:01:16.152 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+16:01:16.551 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+16:01:17.103 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+16:01:17.124 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 2.205 seconds (JVM running for 2.93)
+16:01:23.441 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'

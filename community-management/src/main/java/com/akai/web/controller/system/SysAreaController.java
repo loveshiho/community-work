@@ -17,5 +17,4 @@ public class SysAreaController extends BaseController {
     public BaseResponse getAreaTree() {
         return BaseResponse.success(sysAreaService.findAreaAsTree());
     }
-
 }

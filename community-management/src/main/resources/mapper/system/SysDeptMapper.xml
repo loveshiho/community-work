@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.akai.system.mapper.SysDeptMapper">
+
+    <resultMap type="sysDept" id="SysDeptMap">
+        <result property="deptId" column="dept_id" jdbcType="INTEGER"/>
+        <result property="parentId" column="parent_id" jdbcType="INTEGER"/>
+        <result property="ancestors" column="ancestors" jdbcType="VARCHAR"/>
+        <result property="deptName" column="dept_name" jdbcType="VARCHAR"/>
+        <result property="orderNum" column="order_num" jdbcType="INTEGER"/>
+        <result property="leader" column="leader" jdbcType="VARCHAR"/>
+        <result property="phone" column="phone" jdbcType="VARCHAR"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="VARCHAR"/>
+        <result property="delFlag" column="del_flag" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="selectList" resultMap="SysDeptMap">
+        select d.dept_id,
+               d.parent_id,
+               d.ancestors,
+               d.dept_name,
+               d.order_num,
+               d.leader,
+               d.phone,
+               d.email,
+               d.status,
+               d.del_flag
+        FROM sys_dept d
+        WHERE d.del_flag = '0'
+        ORDER BY d.parent_id, d.order_num
+    </select>
+</mapper>
