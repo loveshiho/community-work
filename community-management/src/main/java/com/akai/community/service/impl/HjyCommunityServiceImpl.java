@@ -7,6 +7,7 @@ import com.akai.community.service.HjyCommunityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -35,5 +36,10 @@ public class HjyCommunityServiceImpl implements HjyCommunityService {
     @Override
     public int updateHjyCommunity(HjyCommunity hjyCommunity) {
         return hjyCommunityMapper.updateById(hjyCommunity);
+    }
+
+    @Override
+    public int deleteCommunityByIds(Long[] ids) {
+        return hjyCommunityMapper.deleteBatchIds(Arrays.asList(ids));
     }
 }

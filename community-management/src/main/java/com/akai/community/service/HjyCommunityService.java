@@ -13,4 +13,6 @@ public interface HjyCommunityService {
     HjyCommunity selectHjyCommunityById(Long communityId);
     // 修改小区
     int updateHjyCommunity(HjyCommunity hjyCommunity);
+    // 删除小区
+    int deleteCommunityByIds(Long[] ids);
 }

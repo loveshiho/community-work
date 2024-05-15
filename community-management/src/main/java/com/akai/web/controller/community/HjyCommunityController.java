@@ -44,4 +44,9 @@ public class HjyCommunityController extends BaseController {
     public BaseResponse edit(@RequestBody HjyCommunity hjyCommunity) {
         return toAjax(hjyCommunityService.updateHjyCommunity(hjyCommunity));
     }
+
+    @DeleteMapping("/{communityIds}")
+    public BaseResponse delete(@PathVariable("communityIds") Long[] ids) {
+        return toAjax(hjyCommunityService.deleteCommunityByIds(ids));
+    }
 }
