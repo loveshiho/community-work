@@ -17,3 +17,15 @@
 01:22:30.788 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
 01:22:30.802 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 1.833 seconds (JVM running for 2.391)
 01:22:57.189 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:02:34.852 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+09:02:34.856 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 14898 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+09:02:34.856 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 1 profile is active: "druid"
+09:02:35.800 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+09:02:35.801 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+09:02:35.801 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+09:02:35.844 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+09:02:35.912 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+09:02:36.355 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+09:02:36.893 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+09:02:36.915 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 2.305 seconds (JVM running for 2.975)
+09:02:45.910 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
