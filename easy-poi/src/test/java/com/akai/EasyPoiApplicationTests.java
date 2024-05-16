@@ -4,16 +4,14 @@ import cn.afterturn.easypoi.excel.ExcelExportUtil;
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
+import cn.afterturn.easypoi.excel.entity.enmus.ExcelType;
 import com.akai.pojo.*;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 // @SpringBootTest
 class EasyPoiApplicationTests {
@@ -82,5 +80,64 @@ class EasyPoiApplicationTests {
         // sheetIndex从0开始，0代表第一页
         List<LoginUrl> list = importMultiSheet(filePath, 1, 1, 1, loginUrlClass);
         list.forEach(System.out::println);
+    }
+
+    public void exportMultiSheet(Object... objects) throws Exception {
+        /*map1*/
+        // 创建参数对象,用于设定 Excel的 sheet页内容等信息
+        ExportParams loginUserParams = new ExportParams();
+        // 设置 sheet的名称
+        loginUserParams.setSheetName("登录用户");
+        loginUserParams.setTitle("登录用户列表");
+
+        // 使用 map创建 sheet1
+        HashMap<String, Object> map1 = new HashMap<>();
+        // 设置title
+        map1.put("title", loginUserParams);
+        // 设置导出的实体类型
+        map1.put("entity", LoginUser.class);
+        // sheet中要填充的数据
+        map1.put("data", objects[0]);
+
+        /*map2*/
+        // 创建参数对象,用于设定 Excel的 sheet页内容等信息
+        ExportParams loginUrlParams = new ExportParams();
+        // 设置 sheet的名称
+        loginUrlParams.setSheetName("URL路径");
+        loginUrlParams.setTitle("URL路径");
+
+        // 使用 map创建 sheet1
+        HashMap<String, Object> map2 = new HashMap<>();
+        // 设置title
+        map2.put("title", loginUrlParams);
+        // 设置导出的实体类型
+        map2.put("entity", LoginUrl.class);
+        // sheet中要填充的数据
+        map2.put("data", objects[1]);
+
+        // 将sheet1和 sheet2进行包装
+        List<Map<String, Object>> list = new ArrayList<>();
+        list.add(map1);
+        list.add(map2);
+
+        // 执行导出方法
+        Workbook workbook = ExcelExportUtil.exportExcel(list, ExcelType.HSSF);
+        workbook.write(new FileOutputStream("/Users/zhong/Desktop/exportLogin.xls"));
+        workbook.close();
+    }
+
+    /*测试导出多sheet页*/
+    @Test
+    void testExportSheet() throws Exception {
+        List<LoginUser> loginUsers = new ArrayList<>();
+        loginUsers.add(new LoginUser(1, "conan", "123456", new Date(), "vip"));
+        loginUsers.add(new LoginUser(2, "shiho", "123456", new Date(), "vip"));
+        loginUsers.add(new LoginUser(3, "haibara", "123456", new Date(), "vip"));
+
+        List<LoginUrl> loginUrls = new ArrayList<>();
+        loginUrls.add(new LoginUrl(1, "post", "www.loveshiho.com"));
+        loginUrls.add(new LoginUrl(2, "get", "www.loveshiho.cn"));
+
+        exportMultiSheet(loginUsers, loginUrls);
     }
 }
