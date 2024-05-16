@@ -11,9 +11,18 @@ import java.util.List;
 public class CourseServiceImpl implements CourseService {
     @Autowired
     private CourseMapper courseMapper;
+
     @Override
     public List<Course> findAll() {
         List<Course> all = courseMapper.findAll();
         return all;
+    }
+
+    @Override
+    public void save(List<Course> courses) {
+        courses.forEach(course ->  {
+            course.setCid(null);    // 自动生成 ID 不使用 Excel中的编号
+            courseMapper.insert(course);
+        });
     }
 }
