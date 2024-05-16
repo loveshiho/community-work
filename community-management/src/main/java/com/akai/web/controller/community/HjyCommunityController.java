@@ -49,4 +49,10 @@ public class HjyCommunityController extends BaseController {
     public BaseResponse delete(@PathVariable("communityIds") Long[] ids) {
         return toAjax(hjyCommunityService.deleteCommunityByIds(ids));
     }
+
+    @GetMapping("/queryPullDown")
+    public BaseResponse queryPullDown(HjyCommunity hjyCommunity) {
+        return BaseResponse.success(hjyCommunityService.queryPullDown(hjyCommunity));
+    }
+
 }

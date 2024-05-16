@@ -2,6 +2,7 @@ package com.akai.community.service;
 
 import com.akai.community.domain.HjyCommunity;
 import com.akai.community.domain.dto.HjyCommunityDto;
+import com.akai.community.domain.vo.HjyCommunityVo;
 
 import java.util.List;
 
@@ -16,4 +17,6 @@ public interface HjyCommunityService {
     int updateHjyCommunity(HjyCommunity hjyCommunity);
     // 删除小区
     int deleteCommunityByIds(Long[] ids);
+    // 获取小区下拉列表
+    List<HjyCommunityVo> queryPullDown(HjyCommunity hjyCommunity);
 }
