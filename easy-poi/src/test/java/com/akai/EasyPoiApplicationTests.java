@@ -1,13 +1,18 @@
 package com.akai;
 
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
+import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
+import cn.afterturn.easypoi.excel.entity.ImportParams;
 import com.akai.pojo.Card;
+import com.akai.pojo.Emp;
 import com.akai.pojo.User;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.jupiter.api.Test;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -47,5 +52,14 @@ class EasyPoiApplicationTests {
 
         fileOutputStream.close();
         workbook.close();
+    }
+
+    @Test
+    void testImport() throws Exception {
+        ImportParams params = new ImportParams();
+        params.setHeadRows(1);  // 列名占几行
+        params.setTitleRows(1); // 标题列占几行
+        List<Emp> emps = ExcelImportUtil.importExcel(new FileInputStream("/Users/zhong/Desktop/emp.xls"), Emp.class, params);
+        emps.forEach(System.out::println);
     }
 }
