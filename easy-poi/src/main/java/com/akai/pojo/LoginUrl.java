@@ -13,6 +13,15 @@ public class LoginUrl implements Serializable {
     @Excel(name = "访问地址", orderNum = "3")
     private String url;
 
+    public LoginUrl() {
+    }
+
+    public LoginUrl(Integer userId, String type, String url) {
+        this.userId = userId;
+        this.type = type;
+        this.url = url;
+    }
+
     public Integer getUserId() {
         return userId;
     }

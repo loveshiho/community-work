@@ -4,6 +4,7 @@ import cn.afterturn.easypoi.excel.annotation.Excel;
 import cn.afterturn.easypoi.excel.annotation.ExcelTarget;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @ExcelTarget("loginUser")
 public class LoginUser implements Serializable {
@@ -14,9 +15,20 @@ public class LoginUser implements Serializable {
     @Excel(name = "密码", orderNum = "3")
     private String password;
     @Excel(name = "注册时间", orderNum = "4", format = "yyyy年MM月dd日")
-    private String createTime;
+    private Date createTime;
     @Excel(name = "状态", orderNum = "5")
     private String status;
+
+    public LoginUser() {
+    }
+
+    public LoginUser(Integer id, String username, String password, Date createTime, String status) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.createTime = createTime;
+        this.status = status;
+    }
 
     public Integer getId() {
         return id;
@@ -42,11 +54,11 @@ public class LoginUser implements Serializable {
         this.password = password;
     }
 
-    public String getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(String createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
@@ -64,7 +76,7 @@ public class LoginUser implements Serializable {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", createTime='" + createTime + '\'' +
+                ", createTime=" + createTime +
                 ", status='" + status + '\'' +
                 '}';
     }
