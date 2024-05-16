@@ -6,6 +6,7 @@ import com.akai.community.domain.dto.HjyCommunityDto;
 import java.util.List;
 
 public interface HjyCommunityService {
+    // 查询小区
     List<HjyCommunityDto> selectHjyCommunityList(HjyCommunity hjyCommunity);
     // 新增小区
     int insertHjyCommunity(HjyCommunity hjyCommunity);

@@ -27,5 +27,6 @@ public interface HjyCommunityMapper extends BaseMapper<HjyCommunity> {
             "</if> " +
             "</where>" +
             "</script>")
+    /*这一方法考虑了条件查询，既可查询所有，也可按条件查询，不给条件即是查询所有*/
     List<HjyCommunityDto> queryList(HjyCommunity hjyCommunity);
 }

@@ -36,6 +36,13 @@
 	</properties>
 
 	<dependencies>
+		<!-- 引入easyPOI -->
+		<dependency>
+			<groupId>cn.afterturn</groupId>
+			<artifactId>easypoi-spring-boot-starter</artifactId>
+			<version>4.2.0</version>
+		</dependency>
+
 		<!--阿里数据库连接池 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
