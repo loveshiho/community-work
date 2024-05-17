@@ -33,6 +33,10 @@ public class JwtUtils {
                 .signWith(signatureAlgorithm, JWT_KEY);
     }
     /*生成Jwt*/
+    public static String createJwt(String subject) {
+        JwtBuilder jwtBuilder = getJwtBuilder(subject, null, getUUID());
+        return jwtBuilder.compact();
+    }
     public static String createJwt(String subject, Long ttl) {
         JwtBuilder jwtBuilder = getJwtBuilder(subject, ttl, getUUID());
         return jwtBuilder.compact();

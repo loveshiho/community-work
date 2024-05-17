@@ -1,5 +1,6 @@
 package com.akai;
 
+import com.akai.pojo.LoginUser;
 import com.akai.pojo.User;
 import com.akai.utils.RedisCache;
 import org.junit.jupiter.api.Test;
