@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -20,6 +21,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
+    @Autowired
+    private AccessDeniedHandler accessDeniedHandler;
+    @Autowired
+    private AuthenticationEntryPoint authenticationEntryPoint;
+
     /*使用随机盐值对密码进行加密*/
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -43,7 +49,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         ;
         /*将自定义认证过滤器添加到过滤器链中*/
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
-
+        /*配置异常处理器*/
+        http.exceptionHandling()
+                // 配置认证失败处理器
+                .accessDeniedHandler(accessDeniedHandler)
+                // 配置授权失败处理器
+                .authenticationEntryPoint(authenticationEntryPoint);
     }
     /*注册AuthenticationManager，供外部类使用*/
     @Bean
