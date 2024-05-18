@@ -18,4 +18,9 @@ public class LoginController {
         /*登录*/
         return loginService.login(sysUser);
     }
+    @RequestMapping("/user/logout")
+    public ResponseResult logout() {
+        /*登出*/
+        return loginService.logout();
+    }
 }

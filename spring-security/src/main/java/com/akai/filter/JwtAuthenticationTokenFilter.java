@@ -33,7 +33,12 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
             return;
         }
         /*3 解析jwt*/
-        Claims claims = JwtUtils.parseJwt(token);
+        Claims claims = null;
+        try {
+            claims = JwtUtils.parseJwt(token);
+        } catch (Exception e) {
+            throw new RuntimeException("非法token");
+        }
         /*4 获取userId*/
         String userId = claims.getSubject();
         /*5 从redis中获取user信息*/

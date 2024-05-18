@@ -38,4 +38,7 @@ public class RedisCache {
         String toJsonValue = toJson(value);
         stringRedisTemplate.opsForValue().set(key, toJsonValue, timeout, timeUnit);
     }
+    public Boolean delCacheObject(final String key) {
+        return stringRedisTemplate.delete(key);
+    }
 }
