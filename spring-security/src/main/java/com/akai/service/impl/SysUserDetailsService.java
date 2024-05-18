@@ -1,5 +1,6 @@
 package com.akai.service.impl;
 
+import com.akai.mapper.MenuMapper;
 import com.akai.mapper.SysUserMapper;
 import com.akai.pojo.LoginUser;
 import com.akai.pojo.SysUser;
@@ -10,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /*
  * 根据用户名检索用户信息
  * 实现loadUserByUsername
@@ -18,6 +21,8 @@ import org.springframework.stereotype.Service;
 public class SysUserDetailsService implements UserDetailsService {
     @Autowired
     private SysUserMapper userMapper;
+    @Autowired
+    private MenuMapper menuMapper;
 
     /*封装用户信息*/
     @Override
@@ -30,8 +35,10 @@ public class SysUserDetailsService implements UserDetailsService {
         if (sysUser == null) {
             throw new  UsernameNotFoundException(username);
         }
+        /*查询权限信息*/
+        List<String> perms = menuMapper.selectPermsByUserId(sysUser.getUserId());
         // 方法的返回值是 UserDetails接口类型，需要返回自定义的实现类，并且将 user信息通过构造方法传入
         /*此时loginUser对象已经被加载进入内存*/
-        return new LoginUser(sysUser);
+        return new LoginUser(sysUser, perms);
     }
 }

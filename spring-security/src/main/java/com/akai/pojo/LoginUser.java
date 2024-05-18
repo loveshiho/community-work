@@ -1,13 +1,24 @@
 package com.akai.pojo;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class LoginUser implements UserDetails {
 
     private SysUser sysUser;
+
+    private List<String> permissions;
+
+    public LoginUser(SysUser sysUser, List<String> permissions) {
+        this.sysUser = sysUser;
+        this.permissions = permissions;
+    }
 
     public SysUser getSysUser() {
         return sysUser;
@@ -25,12 +36,21 @@ public class LoginUser implements UserDetails {
     }
 
     /**
-     *  用于获取用户被授予的权限，可以用于实现访问控制
+     * 用于获取用户被授予的权限，可以用于实现访问控制
      */
+    @JSONField(serialize = false)
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        // authorities权限集合
+        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        /*spring security需要的权限集合*/
+        /*将 permissions集合中的 String类型的权限信息转换成 SimpleGrantedAuthority*/
+        permissions.forEach(permission ->
+                authorities.add(new SimpleGrantedAuthority(permission))
+        );
+        return authorities;
     }
+
     /**
      * 用于获取用户的密码，一般用于进行密码验证
      */
@@ -38,9 +58,10 @@ public class LoginUser implements UserDetails {
     public String getPassword() {
         return sysUser.getPassword();
     }
+
     /**
-    * 用于获取用户名，一般用于进行身份验证
-    * */
+     * 用于获取用户名，一般用于进行身份验证
+     */
     @Override
     public String getUsername() {
         return sysUser.getUserName();
@@ -77,4 +98,21 @@ public class LoginUser implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    public List<String> getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(List<String> permissions) {
+        this.permissions = permissions;
+    }
+
+    @Override
+    public String toString() {
+        return "LoginUser{" +
+                "sysUser=" + sysUser +
+                ", permissions=" + permissions +
+                '}';
+    }
+
 }
