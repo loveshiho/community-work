@@ -1,5 +1,7 @@
 package com.akai.config;
 
+import com.akai.filter.JwtAuthenticationTokenFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -8,9 +10,14 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
+
     /*使用随机盐值对密码进行加密*/
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -32,6 +39,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // 除上面外所有的请求，都需要鉴权认证
                 .anyRequest().authenticated()
         ;
+        /*将自定义认证过滤器添加到过滤器链中*/
+        http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
     }
     /*注册AuthenticationManager，供外部类使用*/
     @Bean
