@@ -1,11 +1,13 @@
 package com.akai.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class IndexController {
+    @CrossOrigin(origins = "http://localhost:8080")
     @RequestMapping("/hello")
     @PreAuthorize("hasAuthority('system:user:list')")
     public String hello() {
