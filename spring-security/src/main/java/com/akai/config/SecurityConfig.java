@@ -43,7 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // 定义请求的授权规则
                 .authorizeRequests()
                 // 对登录接口放行，允许匿名访问
-                .antMatchers("/user/login").anonymous()
+                .mvcMatchers("/user/login","/captchaImage", "/user/loginWithCode").anonymous()
                 .antMatchers("/p").hasAuthority("system:menu:list")
                 // 除上面外所有的请求，都需要鉴权认证
                 .anyRequest().authenticated()

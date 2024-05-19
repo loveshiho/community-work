@@ -41,4 +41,8 @@ public class RedisCache {
     public Boolean delCacheObject(final String key) {
         return stringRedisTemplate.delete(key);
     }
+
+    public Boolean deleteObject(String redisKey) {
+        return stringRedisTemplate.delete(redisKey);
+    }
 }
