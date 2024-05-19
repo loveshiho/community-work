@@ -15,6 +15,22 @@ public class LoginUser implements UserDetails {
 
     private List<String> permissions;
 
+    private List<String> roles;
+
+    public List<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<String> roles) {
+        this.roles = roles;
+    }
+
+    public LoginUser(SysUser sysUser, List<String> permissions, List<String> roles) {
+        this.sysUser = sysUser;
+        this.permissions = permissions;
+        this.roles = roles;
+    }
+
     public LoginUser(SysUser sysUser, List<String> permissions) {
         this.sysUser = sysUser;
         this.permissions = permissions;
@@ -45,9 +61,8 @@ public class LoginUser implements UserDetails {
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
         /*spring security需要的权限集合*/
         /*将 permissions集合中的 String类型的权限信息转换成 SimpleGrantedAuthority*/
-        permissions.forEach(permission ->
-                authorities.add(new SimpleGrantedAuthority(permission))
-        );
+        permissions.forEach(permission -> authorities.add(new SimpleGrantedAuthority(permission)));
+        roles.forEach(role -> authorities.add(new SimpleGrantedAuthority("ROLE_" + role)));
         return authorities;
     }
 

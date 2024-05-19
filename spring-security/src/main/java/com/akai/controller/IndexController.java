@@ -25,4 +25,27 @@ public class IndexController {
     public String hi() {
         return "hello menu~";
     }
+
+    @RequestMapping("haha")
+    @PreAuthorize("hasAnyAuthority('system:user:list', 'system:role:list', 'system:menu:list')")
+    public String haha() {
+        return "hello haha~";
+    }
+
+    @RequestMapping("/yes")
+    @PreAuthorize("@ex.hasAuthority('system:menu:list')")
+    public String yes() {
+        return "hello yes~";
+    }
+
+    @RequestMapping("/p")
+    public String p() {
+        return "hello p~";
+    }
+
+    @RequestMapping("level")
+    @PreAuthorize("hasRole('admin')")
+    public String level() {
+        return "hello level~";
+    }
 }
