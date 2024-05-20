@@ -34,7 +34,7 @@ public class SysUserDetailsService implements UserDetailsService {
         QueryWrapper queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_name", username);
         SysUser sysUser = userMapper.selectOne(queryWrapper);
-        /*查不到数据，跑出异常*/
+        /*查不到数据，抛出异常*/
         if (sysUser == null) {
             throw new  UsernameNotFoundException(username);
         }
