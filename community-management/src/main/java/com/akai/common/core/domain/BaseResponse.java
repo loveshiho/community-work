@@ -12,12 +12,13 @@ public class BaseResponse<T> implements Serializable {
     /**
      * 响应结果描述
      */
-    private String message;
+    private String msg;
     /**
      * 返回的数据
      */
     private T data;
 
+    private boolean success;
     /**
      * 成功返回
      * @param data
@@ -27,8 +28,9 @@ public class BaseResponse<T> implements Serializable {
     public static <T> BaseResponse<T> success(T data) {
         BaseResponse<T> response = new BaseResponse<>();
         response.setCode(ResultCode.SUCCESS.getCode());
-        response.setMessage(ResultCode.SUCCESS.getMessage());
+        response.setMsg(ResultCode.SUCCESS.getMessage());
         response.setData(data);
+        response.setSuccess(true);
         return response;
     }
 
@@ -41,7 +43,7 @@ public class BaseResponse<T> implements Serializable {
     public static <T> BaseResponse<T> fail(String message) {
         BaseResponse<T> response = new BaseResponse<>();
         response.setCode(ResultCode.ERROR.getCode());
-        response.setMessage(message);
+        response.setMsg(message);
         return response;
     }
 
@@ -55,7 +57,15 @@ public class BaseResponse<T> implements Serializable {
     public static <T> BaseResponse<T> fail(String code ,String message) {
         BaseResponse<T> response = new BaseResponse<>();
         response.setCode(code);
-        response.setMessage(message);
+        response.setMsg(message);
+        return response;
+    }
+
+    public static <T> BaseResponse<T> fail(String code ,String message, boolean success) {
+        BaseResponse<T> response = new BaseResponse<>();
+        response.setCode(code);
+        response.setMsg(message);
+        response.setSuccess(success);
         return response;
     }
     public String getCode() {
@@ -66,12 +76,12 @@ public class BaseResponse<T> implements Serializable {
         this.code = code;
     }
 
-    public String getMessage() {
-        return message;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMsg(String message) {
+        this.msg = message;
     }
 
     public T getData() {
@@ -80,5 +90,13 @@ public class BaseResponse<T> implements Serializable {
 
     public void setData(T data) {
         this.data = data;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 }

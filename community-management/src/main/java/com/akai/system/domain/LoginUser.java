@@ -10,6 +10,24 @@ public class LoginUser implements UserDetails {
 
     private SysUser sysUser;
     private String token;
+    private Long loginTime;
+    private Long expireTime;
+
+    public Long getLoginTime() {
+        return loginTime;
+    }
+
+    public void setLoginTime(Long loginTime) {
+        this.loginTime = loginTime;
+    }
+
+    public Long getExpireTime() {
+        return expireTime;
+    }
+
+    public void setExpireTime(Long expireTime) {
+        this.expireTime = expireTime;
+    }
 
     public String getToken() {
         return token;

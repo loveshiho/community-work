@@ -13,4 +13,9 @@ public class GlobalExceptionHandler {
     public BaseResponse baseExceptionHandler(BaseException e) {
         return BaseResponse.fail(e.getDefaultMessage());
     }
+    /*配置全局异常处理*/
+    @ExceptionHandler(CustomException.class)
+    public BaseResponse businessException(CustomException e) {
+        return BaseResponse.fail(String.valueOf(e.getCode()), e.getMsg(), e.isSuccess());
+    }
 }

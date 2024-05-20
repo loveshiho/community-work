@@ -1,5 +1,6 @@
 package com.akai.web.controller.common;
 
+import com.akai.common.core.domain.BaseResponse;
 import com.akai.common.utils.ChainedMap;
 import com.akai.common.utils.Constants;
 import com.akai.common.utils.RedisCache;
@@ -15,9 +16,10 @@ import java.util.concurrent.TimeUnit;
 public class CaptchaController {
     @Autowired
     private RedisCache redisCache;
+
     /*给前端返回验证码*/
     @RequestMapping("/captchaImage")
-    public ChainedMap getCode() {
+    public BaseResponse<ChainedMap> getCode() {
         SpecCaptcha specCaptcha = new SpecCaptcha(130, 48, 4);
         /*生成验证码，及验证码唯一标识*/
         String uuid = UUIDUtils.simpleUUID();
@@ -25,9 +27,9 @@ public class CaptchaController {
         String code = specCaptcha.text().toLowerCase();
         /*保存到redis*/
         redisCache.setCacheObject(redisKey, code, 600, TimeUnit.SECONDS);
-        return ChainedMap
+        return BaseResponse.success(ChainedMap
                 .create()
                 .set("uuid", uuid)
-                .set("img", specCaptcha.toBase64());
+                .set("img", specCaptcha.toBase64()));
     }
 }

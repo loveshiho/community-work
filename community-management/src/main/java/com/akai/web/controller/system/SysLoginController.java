@@ -1,5 +1,6 @@
 package com.akai.web.controller.system;
 
+import com.akai.common.core.domain.BaseResponse;
 import com.akai.common.utils.ChainedMap;
 import com.akai.system.domain.vo.LoginUserVo;
 import com.akai.system.service.SysLoginService;
@@ -12,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class SysLoginController {
     @Autowired
     private SysLoginService sysLoginService;
-
     @RequestMapping("/login")
-    public ChainedMap login(@RequestBody LoginUserVo loginUserVo) {
+
+    public BaseResponse login(@RequestBody LoginUserVo loginUserVo) {
         String token = sysLoginService.login(loginUserVo.getUserName(), loginUserVo.getPassword(), loginUserVo.getCode(), loginUserVo.getUuid());
-        return ChainedMap.create().set("token", token);
+        return BaseResponse.success(ChainedMap.create().set("token", token));
     }
 }

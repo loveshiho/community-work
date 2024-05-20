@@ -1,7 +1,7 @@
 package com.akai.system.service.impl;
 
-import com.akai.common.core.exception.BaseException;
 import com.akai.common.core.exception.CaptchaNotMatchException;
+import com.akai.common.core.exception.UserPasswordNotMatchException;
 import com.akai.common.utils.Constants;
 import com.akai.common.utils.RedisCache;
 import com.akai.system.service.SysLoginService;
@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
 import com.akai.system.domain.*;
 
@@ -32,13 +31,14 @@ public class SysLoginServiceImpl implements SysLoginService {
         String redisCode = redisCache.getCacheObject(redisKey, String.class);
         redisCache.deleteObject(redisKey);
         if (redisCode == null || !code.equalsIgnoreCase(redisCode)) {
-            throw new CaptchaNotMatchException("验证码错误");
+            throw new CaptchaNotMatchException();
         }
         Authentication token = new UsernamePasswordAuthenticationToken(userName, password);
 
         Authentication authentication = authenticationManager.authenticate(token);
+        /*登录失败*/
         if (authentication == null)
-            throw new BaseException("用户名不存在或密码错误");
+            throw new UserPasswordNotMatchException();
         /*登录成功*/
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
         /*生成jwt*/

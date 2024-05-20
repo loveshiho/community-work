@@ -1,5 +1,6 @@
 package com.akai.framework.config;
 
+import com.akai.framework.security.filter.JwtAuthenticationTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +12,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
@@ -18,6 +20,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private AuthenticationEntryPoint unauthorizedHandler;
+    @Autowired
+    private JwtAuthenticationTokenFilter tokenFilter;
+
     /**
      * anyRequest          |   匹配所有请求路径
      * access              |   SpringEl表达式结果为 true时可以访问
@@ -43,7 +48,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/login", "/captchaImage").anonymous()
                 .anyRequest().authenticated();
         http.exceptionHandling().authenticationEntryPoint(unauthorizedHandler);
-
+        /*添加JwtFilter*/
+        http.addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class);
     }
 
     /*

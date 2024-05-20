@@ -29,13 +29,13 @@ public class SysUserDetailsServiceImpl implements UserDetailsService {
         /*查不到数据，抛出异常*/
         if (user == null) {
             logger.info("登录用户: {} 不存在", username);
-            throw new UsernameNotFoundException("登录用户: " + username + " 不存在");
+            throw new UsernameNotFoundException("用户名不存在");
         } else if (UserStatus.DELETED.getCode().equals(user.getDelFlag())) {
             logger.info("登录用户: {} 已被删除", username);
-            throw new BaseException("对不起,您的账号: " + username + " 已被被删除");
+            throw new BaseException("对不起，您的账号: " + username + " 已被被删除");
         } else if (UserStatus.DISABLE.getCode().equals(user.getStatus())) {
             logger.info("登录用户: {} 已被停用", username);
-            throw new BaseException("对不起,您的账号: " + username + " 已被被停用");
+            throw new BaseException("对不起，您的账号: " + username + " 已被被停用");
         }
         return createLoginUser(user);
     }
