@@ -461,7 +461,7 @@
 22:45:23.414 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 23:03:44.087 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
 23:03:44.088 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
-23:07:09.308 [main] INFO  com.akai.log.testLog - [testLog,11] - Hello LogBack!
+23:07:09.308 [main] INFO  com.akai.log.TestLog - [testLog,11] - Hello LogBack!
 23:08:18.729 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
 23:08:18.733 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 74638 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
 23:08:18.733 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"

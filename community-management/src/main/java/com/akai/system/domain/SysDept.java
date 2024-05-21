@@ -1,5 +1,7 @@
 package com.akai.system.domain;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -23,8 +25,10 @@ public class SysDept implements Serializable {
     private Long parentId;
 
     // 父部门名称
+    @TableField(exist = false)
     private String pareantName;
 
+    @TableField(exist = false)
     private List<SysDept> children = new ArrayList<>();
     /**
      * 祖级列表

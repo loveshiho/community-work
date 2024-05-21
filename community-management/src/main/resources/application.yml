@@ -21,6 +21,8 @@ spring:
     active:
       - druid
       - redis
+  jackson:
+    default-property-inclusion: non_null
 
 pagehelper:
   helperDialect: mysql
