@@ -30,6 +30,7 @@ public class BaseController {
         }
     }
     /*响应分页数据*/
+    /*封装查询结果*/
     protected PageResult getData(List<?> list) {
         PageResult pageResult = new PageResult();
         pageResult.setCode(HttpStatus.SUCCESS);
