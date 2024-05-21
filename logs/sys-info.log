@@ -240,3 +240,22 @@
 19:12:55.922 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
 19:12:55.927 [Thread-5] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
 19:12:55.934 [Thread-5] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+20:12:02.546 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+20:12:02.548 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 82793 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+20:12:02.549 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+20:12:03.314 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+20:12:03.315 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+20:12:03.315 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+20:12:03.352 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+20:12:03.550 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+20:12:03.932 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+20:12:04.558 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+20:12:04.574 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 2.189 seconds (JVM running for 2.92)
+20:12:13.261 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:18:42.661 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+20:18:42.665 [Thread-5] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+20:18:42.675 [Thread-5] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+20:18:42.691 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+20:18:42.700 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+20:18:42.707 [Thread-5] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+20:18:42.716 [Thread-5] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed

@@ -5,6 +5,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 
 public class LoginUser implements UserDetails {
 
@@ -12,6 +13,20 @@ public class LoginUser implements UserDetails {
     private String token;
     private Long loginTime;
     private Long expireTime;
+    private List<String> permissions;
+
+    public LoginUser(SysUser sysUser, List<String> permissions) {
+        this.sysUser = sysUser;
+        this.permissions = permissions;
+    }
+
+    public List<String> getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(List<String> permissions) {
+        this.permissions = permissions;
+    }
 
     public Long getLoginTime() {
         return loginTime;

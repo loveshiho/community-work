@@ -2,6 +2,7 @@ package com.akai.system.service.impl;
 
 import com.akai.common.core.exception.BaseException;
 import com.akai.common.enums.UserStatus;
+import com.akai.framework.service.SysPermissionService;
 import com.akai.system.domain.LoginUser;
 import com.akai.system.domain.SysUser;
 import com.akai.system.mapper.SysUserMapper;
@@ -15,12 +16,17 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SysUserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private SysUserMapper userMapper;
     @Autowired
     private SysUserService userService;
+    @Autowired
+    private SysPermissionService permissionService;
+
     /*封装用户信息*/
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -42,10 +48,11 @@ public class SysUserDetailsServiceImpl implements UserDetailsService {
             logger.info("登录用户: {} 已被停用", username);
             throw new BaseException("对不起，您的账号: " + username + " 已被被停用");
         }
-        return createLoginUser(user);
+        List<String> permissions = permissionService.getMenuPermission(user);
+        return createLoginUser(user, permissions);
     }
 
-    private UserDetails createLoginUser(SysUser user) {
-        return new LoginUser(user);
+    private UserDetails createLoginUser(SysUser user, List<String> permissions) {
+        return new LoginUser(user, permissions);
     }
 }

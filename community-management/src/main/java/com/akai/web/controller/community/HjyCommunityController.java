@@ -9,6 +9,7 @@ import com.akai.community.domain.dto.HjyCommunityDto;
 import com.akai.community.service.HjyCommunityService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class HjyCommunityController extends BaseController {
     private HjyCommunityService hjyCommunityService;
 
     @RequestMapping("/list")
+    @PreAuthorize("@pe.hasPerm('system:community:list')")
     public PageResult list(HjyCommunity hjyCommunity) {
         // 使用 PageHelper
         startPage();
