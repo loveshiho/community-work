@@ -1,11 +1,12 @@
 package com.akai.system.domain;
 
 import cn.afterturn.easypoi.excel.annotation.Excel;
+import com.akai.common.core.domain.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 @TableName("sys_dict_type")
-public class SysDictType {
+public class SysDictType extends BaseEntity {
     /**
      * 字典主键
      */
@@ -71,5 +72,8 @@ public class SysDictType {
                 ", dictType='" + dictType + '\'' +
                 ", status='" + status + '\'' +
                 '}';
+    }
+
+    public SysDictType() {
     }
 }

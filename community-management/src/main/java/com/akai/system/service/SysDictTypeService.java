@@ -76,4 +76,7 @@ public interface SysDictTypeService {
      * @return 结果
      */
     public String checkDictTypeUnique(SysDictType dictType);
+
+    /*清空缓存*/
+    public void clearCache();
 }

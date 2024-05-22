@@ -6,6 +6,7 @@ import com.akai.common.core.page.PageResult;
 import com.akai.common.utils.SecurityUtils;
 import com.akai.system.domain.SysDictData;
 import com.akai.system.service.SysDictDataService;
+import com.akai.system.service.SysDictTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,8 @@ import java.util.List;
 public class SysDictDataController extends BaseController {
     @Autowired
     private SysDictDataService sysDictDataService;
+    @Autowired
+    private SysDictTypeService sysDictTypeService;
 
     /*查询字典数据列表*/
     @RequestMapping("/list")
@@ -34,9 +37,9 @@ public class SysDictDataController extends BaseController {
     /**
      * 根据字典类型查询字典数据信息
      */
-    @GetMapping( "/type/{dictType}")
+    @GetMapping("/type/{dictType}")
     public BaseResponse getDictByType(@PathVariable String dictType) {
-        return BaseResponse.success(sysDictDataService.selectDictDataByType(dictType));
+        return BaseResponse.success(sysDictTypeService.selectDictDataByType(dictType));
     }
 
     @PostMapping
@@ -63,5 +66,12 @@ public class SysDictDataController extends BaseController {
     public BaseResponse del(@PathVariable Long[] dictCodes) {
         int rows = sysDictDataService.deleteDictDataByIds(dictCodes);
         return toAjax(rows);
+    }
+
+    /*清空缓存*/
+    @DeleteMapping("/clearCache")
+    public BaseResponse clear() {
+        sysDictTypeService.clearCache();
+        return BaseResponse.success(null);
     }
 }

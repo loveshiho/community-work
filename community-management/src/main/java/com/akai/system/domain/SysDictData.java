@@ -146,4 +146,7 @@ public class SysDictData extends BaseEntity {
                 ", status='" + status + '\'' +
                 '}';
     }
+
+    public SysDictData() {
+    }
 }
