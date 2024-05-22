@@ -28,7 +28,7 @@ public class SysUserServiceImpl implements SysUserService {
         queryWrapper.eq("user_name", userName);
         SysUser sysUser = sysUserMapper.selectOne(queryWrapper);
         if (sysUser == null) return null;
-        SysDept sysDept = sysDeptMapper.selectById(sysUser.getDeptId());
+        SysDept sysDept = sysDeptMapper.selectDeptById(sysUser.getDeptId());
         List<Long> roleIds = sysRoleMapper.selectRoleIdByUserId(sysUser.getUserId());
         List<SysRole> roles = sysRoleMapper.selectBatchIds(roleIds);
         Long[] longArray = roleIds.toArray(new Long[0]);

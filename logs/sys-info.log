@@ -10,3 +10,258 @@
 00:19:15.305 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
 00:19:15.331 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 3.444 seconds (JVM running for 4.081)
 00:19:18.991 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:10:16.783 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91533 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:10:16.784 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:10:16.784 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:10:17.655 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:10:18.149 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:10:18.570 [main] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:10:18.573 [main] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:13:03.237 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91565 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:13:03.239 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:13:03.241 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:13:04.271 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:13:04.723 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:13:06.024 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.979 seconds (JVM running for 3.575)
+11:13:06.152 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:13:06.155 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:17:43.996 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91602 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:17:43.997 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:17:43.999 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:17:44.917 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:17:45.350 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:17:46.767 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.925 seconds (JVM running for 3.585)
+11:17:46.892 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:17:46.895 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:18:58.604 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91617 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:18:58.606 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:18:58.609 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:18:59.472 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:18:59.892 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:19:01.173 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.726 seconds (JVM running for 3.261)
+11:19:01.295 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:19:01.298 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:21:41.747 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91638 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:21:41.749 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:21:41.750 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:21:42.593 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:21:43.011 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:21:44.212 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.616 seconds (JVM running for 3.219)
+11:21:44.320 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:21:44.323 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:22:16.041 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91647 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:22:16.042 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:22:16.044 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:22:16.877 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:22:17.298 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:22:18.619 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.727 seconds (JVM running for 3.301)
+11:22:18.736 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:22:18.740 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:22:54.044 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91660 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:22:54.046 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:22:54.047 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:22:54.869 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:22:55.308 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:22:56.482 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.583 seconds (JVM running for 3.108)
+11:22:56.604 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:22:56.607 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:25:10.881 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91677 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:25:10.882 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:25:10.884 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:25:11.715 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:25:12.131 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:25:13.327 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.594 seconds (JVM running for 3.14)
+11:25:13.450 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:25:13.453 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:27:11.046 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91691 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:27:11.048 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:27:11.049 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:27:11.896 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:27:12.307 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:27:13.487 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.59 seconds (JVM running for 3.14)
+11:27:13.613 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:27:13.617 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:27:31.362 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91700 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:27:31.364 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:27:31.364 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:27:32.180 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:27:32.585 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:27:33.803 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.59 seconds (JVM running for 3.106)
+11:27:33.926 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:27:33.929 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:30:31.045 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91713 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:30:31.046 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:30:31.048 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:30:31.911 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:30:32.348 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:30:33.562 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.698 seconds (JVM running for 3.312)
+11:30:33.697 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:30:33.700 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:31:18.020 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91734 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:31:18.022 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:31:18.022 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:31:18.842 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:31:19.247 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:31:20.448 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.584 seconds (JVM running for 3.103)
+11:31:20.569 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:31:20.572 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:34:20.141 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91772 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:34:20.143 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:34:20.146 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:34:21.165 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:34:21.579 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:34:22.818 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.836 seconds (JVM running for 3.76)
+11:34:22.943 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:34:22.946 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:34:36.214 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91790 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:34:36.215 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:34:36.216 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:34:37.028 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:34:37.432 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:34:38.632 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.579 seconds (JVM running for 3.147)
+11:34:38.758 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:34:38.761 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:39:58.124 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91912 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:39:58.126 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:39:58.128 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:39:59.043 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:39:59.516 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:40:00.760 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.908 seconds (JVM running for 3.528)
+11:40:00.884 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:40:00.887 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+11:40:17.492 [main] INFO  c.a.redis.TestRedis - [logStarting,55] - Starting TestRedis using Java 21.0.2 on zero-2.local with PID 91925 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+11:40:17.494 [main] INFO  c.a.redis.TestRedis - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+11:40:17.494 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:40:18.334 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+11:40:18.746 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+11:40:19.937 [main] INFO  c.a.redis.TestRedis - [logStarted,61] - Started TestRedis in 2.592 seconds (JVM running for 3.122)
+11:40:20.060 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+11:40:20.063 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+20:46:36.617 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+20:46:36.625 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 94669 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+20:46:36.625 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+20:46:37.839 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+20:46:37.839 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+20:46:37.839 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+20:46:37.890 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+20:46:38.190 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+20:46:38.705 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+20:46:40.350 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+20:46:40.368 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 4.202 seconds (JVM running for 5.993)
+20:48:12.217 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:05:06.730 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+21:05:06.736 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 94949 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+21:05:06.736 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:05:07.874 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+21:05:07.874 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:05:07.874 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+21:05:07.931 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:05:08.229 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+21:05:08.728 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+21:05:10.329 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+21:05:10.347 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 3.923 seconds (JVM running for 4.613)
+21:05:30.344 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:11:15.011 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+21:11:15.013 [Thread-5] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+21:11:15.016 [Thread-5] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+21:11:15.028 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+21:11:15.033 [Thread-5] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+21:11:15.038 [Thread-5] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+21:11:15.044 [Thread-5] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+21:12:39.796 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 94949 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+21:12:39.798 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:12:40.252 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:12:40.252 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+21:12:40.272 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:12:40.314 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+21:12:41.837 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 94949 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+21:12:41.837 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:12:42.612 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:12:42.612 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+21:12:42.632 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:12:42.832 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+21:12:43.399 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-2} inited
+21:12:44.116 [main] INFO  c.a.m.TestDeptMapper - [logStarting,55] - Starting TestDeptMapper using Java 21.0.2 on zero-2.local with PID 95041 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+21:12:44.119 [main] INFO  c.a.m.TestDeptMapper - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:12:44.122 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+21:12:44.386 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 2.611 seconds (JVM running for 458.668)
+21:12:45.580 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+21:12:46.225 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+21:12:47.986 [main] INFO  c.a.m.TestDeptMapper - [logStarted,61] - Started TestDeptMapper in 4.191 seconds (JVM running for 5.892)
+21:12:48.154 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+21:12:48.165 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+21:13:31.331 [Thread-7] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+21:13:31.343 [Thread-7] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-2} closing ...
+21:13:31.347 [Thread-7] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-2} closed
+21:13:31.378 [main] INFO  c.a.m.TestDeptMapper - [logStarting,55] - Starting TestDeptMapper using Java 21.0.2 on zero-2.local with PID 95053 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+21:13:31.381 [main] INFO  c.a.m.TestDeptMapper - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:13:31.381 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+21:13:31.606 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 94949 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+21:13:31.606 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:13:31.985 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:13:31.985 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+21:13:32.000 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:13:32.080 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+21:13:32.276 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-3} inited
+21:13:33.024 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 1.464 seconds (JVM running for 507.308)
+21:13:33.065 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+21:13:33.713 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+21:13:35.417 [main] INFO  c.a.m.TestDeptMapper - [logStarted,61] - Started TestDeptMapper in 4.339 seconds (JVM running for 5.41)
+21:13:35.600 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+21:13:35.604 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+21:14:10.539 [main] INFO  c.a.m.TestDeptMapper - [logStarting,55] - Starting TestDeptMapper using Java 21.0.2 on zero-2.local with PID 95064 (started by zhong in /Users/zhong/Desktop/Java/community-work/community-management)
+21:14:10.542 [main] INFO  c.a.m.TestDeptMapper - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:14:10.543 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+21:14:11.777 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+21:14:12.359 [main] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+21:14:14.084 [main] INFO  c.a.m.TestDeptMapper - [logStarted,61] - Started TestDeptMapper in 3.807 seconds (JVM running for 4.978)
+21:14:14.253 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2032] - {dataSource-1} closing ...
+21:14:14.258 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2104] - {dataSource-1} closed
+21:15:08.874 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+21:15:08.883 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 95073 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+21:15:08.884 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:15:10.586 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+21:15:10.587 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:15:10.587 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+21:15:10.639 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:15:10.928 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+21:15:11.390 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+21:15:13.202 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+21:15:13.221 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 4.658 seconds (JVM running for 5.509)
+21:15:17.638 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:16:20.598 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+21:16:20.600 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 95088 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+21:16:20.601 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:16:21.728 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+21:16:21.728 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:16:21.728 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+21:16:21.785 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:16:22.083 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+21:16:22.547 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+21:16:24.181 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+21:16:24.200 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 3.953 seconds (JVM running for 4.566)
+21:16:30.492 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:19:24.110 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+21:19:24.114 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 95127 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+21:19:24.114 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:19:25.262 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+21:19:25.263 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:19:25.263 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+21:19:25.310 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:19:25.630 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+21:19:26.121 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+21:19:27.844 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+21:19:27.863 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 3.985 seconds (JVM running for 5.64)
+21:19:34.028 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:32:52.060 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+21:32:52.068 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarting,55] - Starting CommunityManagementApplication using Java 21.0.2 on zero-2.local with PID 95257 (/Users/zhong/Desktop/Java/community-work/community-management/target/classes started by zhong in /Users/zhong/Desktop/Java/community-work)
+21:32:52.069 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStartupProfileInfo,637] - The following 2 profiles are active: "druid", "redis"
+21:32:53.371 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+21:32:53.371 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:32:53.371 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+21:32:53.417 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:32:53.722 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+21:32:54.207 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,985] - {dataSource-1} inited
+21:32:55.810 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+21:32:55.828 [restartedMain] INFO  c.a.CommunityManagementApplication - [logStarted,61] - Started CommunityManagementApplication in 4.092 seconds (JVM running for 4.898)
+21:33:29.142 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'

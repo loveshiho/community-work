@@ -1,6 +1,8 @@
 package com.akai.system.domain;
 
+import com.akai.common.core.domain.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,7 +15,8 @@ import java.util.List;
  * @author makejava
  * @since 2024-05-15 15:10:58
  */
-public class SysDept implements Serializable {
+@TableName("sys_dept")
+public class SysDept extends BaseEntity {
     private static final long serialVersionUID = 259481181074661206L;
     /**
      * 部门id
@@ -159,6 +162,24 @@ public class SysDept implements Serializable {
 
     public void setChildren(List<SysDept> children) {
         this.children = children;
+    }
+
+    @Override
+    public String toString() {
+        return "SysDept{" +
+                "deptId=" + deptId +
+                ", parentId=" + parentId +
+                ", pareantName='" + pareantName + '\'' +
+                ", children=" + children +
+                ", ancestors='" + ancestors + '\'' +
+                ", deptName='" + deptName + '\'' +
+                ", orderNum=" + orderNum +
+                ", leader='" + leader + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", status='" + status + '\'' +
+                ", delFlag='" + delFlag + '\'' +
+                '}';
     }
 }
 
