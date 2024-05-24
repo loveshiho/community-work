@@ -1,0 +1,9 @@
+spring:
+  banner:
+    charset: UTF-8
+    location: classpath:banner.txt
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_01?useSSL=false&autoReconnect=true&characterEncoding=utf8
+    username: root
+    password: zt20040801.
+    driver-class-name: com.mysql.cj.jdbc.Driver
